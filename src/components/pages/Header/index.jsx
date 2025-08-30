@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header className={darkMode ? "dark-theme" : "light-theme"}>
-      <img src="/assets/giovanadarklogo.png" alt="Logo" />
+      <img src="dist/assets/giovanadarklogo.png" alt="Logo" />
 
       <div className="menu">
         <nav>
