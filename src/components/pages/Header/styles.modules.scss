@@ -79,7 +79,7 @@ header {
         color: #fff; // Cor do ícone ao passar o mouse
       }
     }
-    
+
     // Language
     .lang-toggle {
       cursor: pointer;
@@ -114,9 +114,11 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   z-index: 998;
-  
+
   // Estado ativo do overlay
   &.active {
     opacity: 1;
@@ -128,21 +130,22 @@ header {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -280px;
+  right: -17.5rem;
   width: 280px;
-  height: 100%;
-  background-color: var(--bg-header-color);
+  height: 50%;
+  border-radius: 1rem;
+  background-color: var(--bg-header-color); // MESMO fundo do header
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s zoom;
   z-index: 999;
   padding: 80px 2rem 2rem;
   overflow-y: auto;
-  
-  // Estado ativo do menu mobile
+
+  // Quando o menu está ativo, ele desliza para dentro
   &.active {
     transform: translateX(-280px);
   }
-  
+
   // Botão de fechar (X)
   .close-menu {
     position: absolute;
@@ -151,33 +154,34 @@ header {
     background: none;
     border: none;
     color: var(--text-color);
+    font-size: 1.5rem;
     cursor: pointer;
-    
+
     &:hover {
       color: #fff;
     }
   }
-  
+
   // Navegação mobile
   nav {
     ul {
       list-style: none;
       padding: 0;
       margin: 0 0 2rem 0;
-      
+
       li {
         margin-bottom: 1.5rem;
-        
+
         a {
           color: var(--menu-text);
           text-decoration: none;
           font-size: 1.2rem;
-          display: block;
-          padding: 0.5rem 0;
+          display: inline-block;
           position: relative;
           transition: color 0.3s ease;
-          
-          // Efeito de underline (igual ao desktop)
+          font-weight: 600;
+
+          // Efeito underline igual ao desktop
           &::after {
             content: "";
             position: absolute;
@@ -190,10 +194,11 @@ header {
             transform-origin: right;
             transition: transform 0.5s ease;
           }
-          
+
+          // Quando passa o mouse
           &:hover {
-            color: #ffffff;
-            
+            color: #fff;
+
             &::after {
               transform: scaleX(1);
               transform-origin: left;
@@ -203,18 +208,19 @@ header {
       }
     }
   }
-  
+
   // Toggles dentro do menu mobile
   .mobile-toggle {
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    
-    .theme-toggle, .lang-toggle {
+
+    .theme-toggle,
+    .lang-toggle {
       cursor: pointer;
-      color: var(--text-color); 
-      
+      color: var(--text-color);
+
       &:hover {
         opacity: 0.8;
         color: #ffffff;
@@ -222,6 +228,7 @@ header {
     }
   }
 }
+
 
 // ========== RESPONSIVIDADE ==========
 // Tablets
@@ -260,18 +267,18 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    
+
     .menu {
       display: none;
     }
-    
+
     .hamburger-btn {
       display: flex;
     }
-    
+
     .toggle {
       display: none;
-      
+
       .lang-toggle {
         display: none;
         margin-right: 0;
@@ -284,21 +291,21 @@ header {
 @media (max-width: 480px) {
   header {
     padding: 1rem;
-    
+
     img {
       height: 3.5rem;
       margin-left: 1rem;
     }
-    
+
     .mobile-menu {
       width: 16rem;
       right: -16rem;
-      
+
       &.active {
         transform: translateX(-250px);
       }
     }
-    
+
     .toggle {
       gap: 1.5rem;
     }

@@ -1,0 +1,61 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-home {
+  display: flex;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-top: 6.5rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+.text-home h1 {
+  color: --text-color;
+  font-size: 3rem;
+  max-width: 40rem;
+}
+.text-home h1 .my-name {
+  color: #4197ff;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+.text-home p {
+  max-width: 35rem;
+  font-size: 1.25rem;
+}
+.text-home .btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.text-home .btn .ctt-btn {
+  background-color: var(--color1);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.text-home .btn .ctt-btn:hover {
+  background-color: #1e6edc;
+}
+.text-home .btn .cv-btn {
+  background-color: var(--color2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.text-home .btn .cv-btn:hover {
+  background-color: #1e6edc;
+}/*# sourceMappingURL=styles.modules.css.map */

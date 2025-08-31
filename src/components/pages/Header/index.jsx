@@ -2,17 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import "./styles.modules.scss";
 import { FaMoon } from "react-icons/fa";
 import { Sun, Languages, X, Menu } from "lucide-react";
-
-//Tudo comentado é por questão de organização e entendimento do código
+import { useTheme } from "../../../contexts/ThemeContext";
 
 function Header() {
-  // dark mode
-  const [darkMode, setDarkMode] = useState(true);
-  const toggleTheme = () => setDarkMode(!darkMode);
+  // TROCA ESTAS 4 LINHAS:
+  const { darkMode, toggleTheme, isPT, toggleLanguage } = useTheme();
 
-  // idioma
-  const [isPT, setIsPT] = useState(true);
-  const toggleLanguage = () => setIsPT(!isPT);
+
 
   // Menu mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,9 +29,9 @@ function Header() {
       // Verifica se o clique foi fora do menu e fora do botão hamburger
       if (
         isMobileMenuOpen &&
-        menuRef.current && 
+        menuRef.current &&
         !menuRef.current.contains(event.target) &&
-        hamburgerRef.current && 
+        hamburgerRef.current &&
         !hamburgerRef.current.contains(event.target)
       ) {
         closeMobileMenu();
@@ -44,7 +40,7 @@ function Header() {
 
     // Adiciona o event listener
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     // Remove o event listener quando o componente é desmontado
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -59,7 +55,7 @@ function Header() {
   return (
     <header className={darkMode ? "dark-theme" : "light-theme"}>
       <img src="dist/assets/giovanadarklogo.png" alt="Logo" className="logo" />
-      
+
       <div className="menu">
         <nav>
           <ul>
@@ -93,9 +89,9 @@ function Header() {
       </div>
 
       {/* Botão Hamburguer com ref */}
-      <div 
+      <div
         ref={hamburgerRef}
-        className="hamburger-btn" 
+        className="hamburger-btn"
         onClick={toggleMobileMenu}
         aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
       >
@@ -104,26 +100,25 @@ function Header() {
 
       {/* Overlay para fechar o menu */}
       {isMobileMenuOpen && (
-        <div 
-          className="menu-overlay" 
+        <div
+          className="menu-overlay"
           onClick={closeMobileMenu}
-          onKeyDown={(e) => e.key === 'Escape' && closeMobileMenu()}
+          onKeyDown={(e) => e.key === "Escape" && closeMobileMenu()}
           tabIndex={0}
           aria-label="Fechar menu"
         ></div>
       )}
 
       {/* Menu Mobile */}
-      <div 
+      <div
         ref={menuRef}
         className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}
       >
-        <button 
-          className="close-menu" 
+        <button
+          className="close-menu"
           onClick={closeMobileMenu}
           aria-label="Fechar menu"
-        >
-        </button>
+        ></button>
 
         <nav>
           <ul>

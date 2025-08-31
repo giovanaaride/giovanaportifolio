@@ -1,27 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import 'aos/dist/aos.css'; 
 
+// ========== VARIÁVEIS GLOBAIS ==========
+:root {
+  // Tema escuro (valores padrão)
+  --bg-header-color: #1a2131;
+  --bg-color: #1a2131;
+  --text-color: #dadada;
+  --menu-bg: #437abd;
+  --menu-text: #ffffff;
+}
+
+// ========== ESTILOS GLOBAIS ==========
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-/* Tema escuro */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease; // Transição suave
+}
+
+// ========== CLASSES DE TEMA ==========
 .dark-theme {
-    --bg-header-color: #1a2131;
-    --bg-color: #1a2131;
-    --text-color: #dadada;
-    --menu-bg: #437abd;
-    --menu-text: #ffffff;
+  --bg-header-color: #1a2131;
+  --menu-bg: #489aff;
+  --menu-text: #ffffff;
+
+  --bg-color: #1a2131;
+  --text-color: #dadada;
+  --text-color-secundary: #1a2131;
+  --color1: #489aff;
+  --color2: #001894;
 }
 
-/* Tema claro */
 .light-theme {
-    --bg-header-color: #437abd;
-    --text-color: #1a2131;
-    --menu-bg: #c9def2;
-    --menu-text: #1a2131;
+  --bg-header-color: #489aff;
+  --menu-bg: #c9def2;
+  --menu-text: #263e74;
+
+  --bg-color: #f8f9fa;
+  --text-color: #1a2131;
+  --text-color-secundary: #dadada;
+  --color1: #489aff;
+  --color2: #001894;
 }
