@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3em;
+    height: 70vh;
 }
 
 .text-home {
@@ -12,16 +14,38 @@
     flex-direction: column;
     gap: 2rem;
 
-
     h1 {
         color: --text-color;
         font-size: 3rem;
         max-width: 40rem;
 
+        line-height: 1.5;
+        min-height: 80px;
+
         .my-name {
-            color: #4197ff;
+            color: var(--color1);
             font-weight: 600;
             font-size: 3.5rem;
+            display: inline-block;
+        }
+    }
+
+    .cursor {
+        animation: blink 1s infinite;
+        color: var(--text-color);
+        margin-left: 2px;
+        font-weight: 300;
+        font-size: 3.5rem;
+    }
+
+    @keyframes blink {
+        0%,
+        50% {
+            opacity: 1;
+        }
+        51%,
+        100% {
+            opacity: 0;
         }
     }
 
