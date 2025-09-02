@@ -107,7 +107,7 @@ header .toggle .lang-toggle :hover {
   border-radius: 1rem;
   background-color: var(--bg-header-color);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s zoom;
+  transition: transform 0.7s ease-in-out;
   z-index: 999;
   padding: 80px 2rem 2rem;
   overflow-y: auto;

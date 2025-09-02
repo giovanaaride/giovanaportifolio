@@ -8,7 +8,6 @@ header {
   height: 10vh;
   position: relative;
   border-radius: 3rem;
-  
 
   // Estilo da logo
   img {
@@ -136,12 +135,14 @@ header {
   width: 280px;
   height: 50%;
   border-radius: 1rem;
-  background-color: var(--bg-header-color); // MESMO fundo do header
+  background-color: var(--bg-header-color); 
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s zoom;
+  //transition: transform 0.5s zoom;
+   transition: transform 0.7s ease-in-out;
   z-index: 999;
   padding: 80px 2rem 2rem;
   overflow-y: auto;
+  
 
   // Quando o menu está ativo, ele desliza para dentro
   &.active {
