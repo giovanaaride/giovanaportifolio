@@ -130,31 +130,30 @@
   }
 }
 @media (max-width: 768px) {
+  .home-img-wrapper {
+    margin-top: 3rem;
+  }
   .text-home {
     max-width: 90%;
   }
   .text-home h1 {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    max-width: 90%;
   }
   .text-home h1 .my-name {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
+    min-width: 20rem;
   }
   .text-home p {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
-  .btn .ctt-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    border: none;
+  .text-home .btn .ctt-btn {
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  .btn .ctt-btn:hover {
-    background-color: #1e6edc;
-  }
-  .btn .cv-btn {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.5rem;
+  .text-home .btn .cv-btn {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.modules.css.map */
