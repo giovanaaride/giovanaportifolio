@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from "react";
+import { useTheme } from "../../../contexts/ThemeContext";
 import "./styles.modules.scss";
+
 import { FaMoon } from "react-icons/fa";
 import { Sun, Languages, X, Menu } from "lucide-react";
-import { useTheme } from "../../../contexts/ThemeContext";
+import logoDark from '/assets/giovanadarklogo.png'
+
 
 function Header() {
   // TROCA ESTAS 4 LINHAS:
   const { darkMode, toggleTheme, isPT, toggleLanguage } = useTheme();
-
-
 
   // Menu mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,8 +55,11 @@ function Header() {
 
   return (
     <header className={darkMode ? "dark-theme" : "light-theme"}>
-      <img src="dist/assets/giovanadarklogo.png" alt="Logo" className="logo" />
+      <a href="#home" className="logo-link">
+        {" "}
+    <img src={logoDark} alt="Logo" className="logo" />
 
+      </a>
       <div className="menu">
         <nav>
           <ul>

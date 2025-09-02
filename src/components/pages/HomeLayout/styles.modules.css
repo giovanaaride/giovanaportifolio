@@ -4,6 +4,17 @@
   justify-content: center;
   gap: 3em;
   height: 70vh;
+  min-width: 70%;
+  padding: 5%;
+}
+.home-container .home-img-wrapper img {
+  display: block;
+  transition: transform 1.3s ease;
+  width: 25rem;
+  height: auto;
+}
+.home-container .home-img-wrapper img:hover {
+  transform: scale(1.05);
 }
 
 .text-home {
@@ -78,4 +89,42 @@
 }
 .text-home .btn .cv-btn:hover {
   background-color: #1e6edc;
+}
+.text-home .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.text-home .social-icons a {
+  color: var(--text-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.text-home .social-icons a:hover {
+  color: var(--color1);
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    gap: 1em;
+    height: 100vh;
+  }
+  .home-container .home-img-wrapper img {
+    width: 70%;
+    height: auto;
+  }
+  .text-home {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .text-home h1 {
+    font-size: 2rem;
+  }
+  .text-home h1 .my-name {
+    font-size: 2.5rem;
+  }
+  .text-home p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=styles.modules.css.map */

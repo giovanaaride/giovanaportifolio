@@ -1,6 +1,11 @@
 import { useTheme } from "../../../contexts/ThemeContext";
-import "./styles.modules.scss";
 import { useState, useEffect } from "react";
+import "./styles.modules.scss";
+
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import ImgHome from '/assets/Imghome.png'
+
 
 function HomeLayout() {
   const { darkMode, isPT } = useTheme(); // ← CONTEXT
@@ -41,14 +46,22 @@ function HomeLayout() {
 
   return (
     <section className={darkMode ? "home home-dark" : "home home-light"}>
+      {/* Image Home */}
       <div className="home-container">
-        <img
-          className="home-img"
-          src="/dist/assets/Imghome.png"
-          alt="Home"
+        <a
+          //href="#"
+          target="_blank"
+          rel="noopener noreferrer"
           data-aos="fade-right"
-        />
+          data-aos-delay="300"
+          className="home-img-wrapper"
+        >
 
+              <img src={ImgHome} alt="Logo" className="Giovana" />
+          
+        </a>
+
+        {/* Title and Text Home */}
         <div className="text-home">
           <h1>
             {displayedBase}
@@ -67,6 +80,7 @@ function HomeLayout() {
               ? "Desenvolver é mais que escrever código: É criar experiências. Hoje faço isso no Front-End, mas minha meta é unir todas as peças e atuar como Full Stack, trazendo ideias para a vida de ponta a ponta."
               : "Developing is more than writing code: it’s about creating experiences. Today I do this in Front-End, but my goal is to connect all the pieces and work as a Full Stack developer, bringing ideas to life from end to end. "}
           </p>{" "}
+          {/* Buttons */}
           <div className="btn">
             <button className="ctt-btn">
               {isPT ? "Fale comigo" : "Contact me"}
@@ -75,6 +89,26 @@ function HomeLayout() {
               {isPT ? "Baixar CV" : "Download CV"}
             </button>
           </div>
+          {/* Icons */}
+          <div className="social-icons">
+            <a
+              href="https://www.linkedin.com/in/giovana-aride-24759b28a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin data-aos="fade-up" data-aos-delay="100" />
+            </a>
+            <a
+              href="https://github.com/giovanaaride"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub data-aos="fade-up" data-aos-delay="200" />
+            </a>
+            <a href="mailto:giovanaaride@gmail.com">
+              <MdEmail data-aos="fade-up" data-aos-delay="300" />
+            </a>
+          </div>{" "}
         </div>
       </div>
     </section>
