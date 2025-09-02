@@ -7,7 +7,6 @@
     min-width: 70%;
     padding: 5%;
 
-
     .home-img-wrapper {
         img {
             display: block;
@@ -163,11 +162,12 @@
 @media (max-width: 768px) {
     .text-home {
         max-width: 90%;
+        
         h1 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
 
             .my-name {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
         }
 
@@ -190,8 +190,8 @@
             }
         }
         .cv-btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.5rem;
         }
     }
 }

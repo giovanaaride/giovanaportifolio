@@ -7,6 +7,7 @@ header {
   color: var(--text-color);
   height: 10vh;
   position: relative;
+  border-radius: 3rem;
 }
 header img {
   height: 5rem;
@@ -58,18 +59,18 @@ header .toggle {
 }
 header .toggle .btn-toggle {
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--color1);
 }
 header .toggle .btn-toggle :hover {
-  color: #fff;
+  color: var(--color2);
 }
 header .toggle .lang-toggle {
   cursor: pointer;
   margin-right: 2rem;
-  color: var(--text-color);
+  color: var(--color1);
 }
 header .toggle .lang-toggle :hover {
-  color: #fff;
+  color: var(--color2);
 }
 
 .hamburger-btn {

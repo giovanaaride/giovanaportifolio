@@ -46,8 +46,8 @@ body {
 }
 
 .light-theme {
-  --bg-header-color: #489aff;
-  --menu-bg: #c9def2;
+  --bg-header-color: #F8F9FA;
+  --menu-bg: #b9d9f8;
   --menu-text: #263e74;
   --bg-color: #f8f9fa;
   --text-color: #1a2131;
