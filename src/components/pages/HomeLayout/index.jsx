@@ -4,8 +4,7 @@ import "./styles.modules.scss";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ImgHome from '/assets/Imghome.png'
-
+import ImgHome from "/assets/Imghome.png";
 
 function HomeLayout() {
   const { darkMode, isPT } = useTheme(); // ← CONTEXT
@@ -56,9 +55,7 @@ function HomeLayout() {
           data-aos-delay="300"
           className="home-img-wrapper"
         >
-
-              <img src={ImgHome} alt="Logo" className="Giovana" />
-          
+          <img src={ImgHome} alt="Logo" className="Giovana" />
         </a>
 
         {/* Title and Text Home */}
@@ -82,12 +79,25 @@ function HomeLayout() {
           </p>{" "}
           {/* Buttons */}
           <div className="btn">
-            <button className="ctt-btn">
+            <a className="ctt-btn" href="https://w.app/giovanaaride">
               {isPT ? "Fale comigo" : "Contact me"}
-            </button>
-            <button className="cv-btn">
+            </a>
+
+            <a
+              className="cv-btn"
+              href={
+                isPT
+                  ? "/assets/public/curriculo_giovana_pt.pdf"
+                  : "/assets/public/curriculum_giovana_en.pdf"
+              }
+              download={
+                isPT
+                  ? "curriculo_giovana_pt.pdf"
+                  : "curriculum_giovana_en.pdf"
+              }
+            >
               {isPT ? "Baixar CV" : "Download CV"}
-            </button>
+            </a>
           </div>
           {/* Icons */}
           <div className="social-icons">

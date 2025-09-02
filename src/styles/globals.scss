@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import 'aos/dist/aos.css'; 
+@import "aos/dist/aos.css";
 
 // ========== VARIÁVEIS GLOBAIS ==========
 :root {
@@ -9,6 +9,8 @@
   --text-color: #dadada;
   --menu-bg: #437abd;
   --menu-text: #ffffff;
+
+  font-size: 100%;
 }
 
 // ========== ESTILOS GLOBAIS ==========
@@ -25,6 +27,21 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease; // Transição suave
+
+
+//Responsividade e centralização
+  min-width: 320px; // Não deixa ficar menor que mobile
+  overflow-x: hidden; // Evita scroll horizontal indesejado
+
+  // Container global
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5%, 40px); // Distância lateral responsiva
+
+  // Para telas muito grandes
+  @media (min-width: 2000px) {
+    padding: 0 5rem; // Mais espaço em telas gigantes
+  }
 }
 
 // ========== CLASSES DE TEMA ==========
@@ -41,8 +58,8 @@ body {
 }
 
 .light-theme {
-  --bg-header-color: #489aff;
-  --menu-bg: #c9def2;
+  --bg-header-color: #F8F9FA;
+  --menu-bg: #b9d9f8;
   --menu-text: #263e74;
 
   --bg-color: #f8f9fa;

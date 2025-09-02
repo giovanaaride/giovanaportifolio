@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import 'aos/dist/aos.css';
+@import "aos/dist/aos.css";
 :root {
   --bg-header-color: #1a2131;
   --bg-color: #1a2131;
   --text-color: #dadada;
   --menu-bg: #437abd;
   --menu-text: #ffffff;
+  font-size: 100%;
 }
 
 * {
@@ -21,6 +22,16 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
+  min-width: 320px;
+  overflow-x: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5%, 40px);
+}
+@media (min-width: 2000px) {
+  body {
+    padding: 0 5rem;
+  }
 }
 
 .dark-theme {

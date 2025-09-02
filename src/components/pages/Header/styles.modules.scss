@@ -7,6 +7,7 @@ header {
   color: var(--text-color);
   height: 10vh;
   position: relative;
+  border-radius: 3rem;
 
   // Estilo da logo
   img {
@@ -73,10 +74,10 @@ header {
     // Theme
     .btn-toggle {
       cursor: pointer;
-      color: var(--text-color);
+      color: var(--color1);
 
       :hover {
-        color: #fff; // Cor do ícone ao passar o mouse
+      color: var(--color2);
       }
     }
 
@@ -84,10 +85,10 @@ header {
     .lang-toggle {
       cursor: pointer;
       margin-right: 2rem;
-      color: var(--text-color);
+      color: var(--color1);
 
       :hover {
-        color: #fff;
+      color: var(--color2);
       }
     }
   }

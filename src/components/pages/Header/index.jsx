@@ -4,8 +4,8 @@ import "./styles.modules.scss";
 
 import { FaMoon } from "react-icons/fa";
 import { Sun, Languages, X, Menu } from "lucide-react";
-import logoDark from '/assets/giovanadarklogo.png'
-
+import logoDark from "/assets/giovanadarklogo.png";
+import logoLight from "/assets/giovanalightlogo.png";
 
 function Header() {
   // TROCA ESTAS 4 LINHAS:
@@ -57,9 +57,14 @@ function Header() {
     <header className={darkMode ? "dark-theme" : "light-theme"}>
       <a href="#home" className="logo-link">
         {" "}
-    <img src={logoDark} alt="Logo" className="logo" />
-
+        {darkMode ? (
+          <img src={logoDark} alt="Logo" className="logo" />
+        ) : (
+          <img src={logoLight} alt="Logo" className="logo" />
+        )}
       </a>
+
+
       <div className="menu">
         <nav>
           <ul>

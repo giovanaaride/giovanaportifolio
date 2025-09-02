@@ -7,10 +7,11 @@
     min-width: 70%;
     padding: 5%;
 
+
     .home-img-wrapper {
         img {
             display: block;
-           // cursor: pointer;
+            // cursor: pointer;
             transition: transform 1.3s ease;
             width: 25rem;
             height: auto;
@@ -29,7 +30,7 @@
     margin-top: 6.5rem;
     flex-direction: column;
     gap: 2rem;
-    
+
     h1 {
         color: --text-color;
         font-size: 3rem;
@@ -131,6 +132,7 @@
         flex-direction: column;
         gap: 1em;
         height: 100vh;
+        max-width: 75rem;
 
         .home-img-wrapper {
             img {
@@ -159,4 +161,37 @@
 }
 
 @media (max-width: 768px) {
+    .text-home {
+        max-width: 90%;
+        h1 {
+            font-size: 1.5rem;
+
+            .my-name {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+    .btn {
+        .ctt-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #1e6edc;
+            }
+        }
+        .cv-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+        }
+    }
 }
