@@ -112,7 +112,6 @@
     max-width: 75rem;
   }
   .home-container .home-img-wrapper img {
-    width: 70%;
     height: auto;
   }
   .text-home {
@@ -132,6 +131,9 @@
 @media (max-width: 768px) {
   .home-img-wrapper {
     margin-top: 1.5rem;
+  }
+  .home-img-wrapper img {
+    height: 4rem;
   }
   .text-home {
     max-width: 90%;
